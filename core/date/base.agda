@@ -47,6 +47,6 @@ Day : Year → Month → Type
 Day year month = Σ ℕ λ d → (1 ≤ d) × (d ≤ (daysOf year month))
 
 test : Day 2024 February
-fst test = 29 
-_×_.fst (snd test) = 28 , ≡-refl
-_×_.snd (snd test) = Z , ≡-refl
+wit test = 29 
+fst (prf test) = 28 , ≡-refl
+snd (prf test) = Z , ≡-refl
